@@ -11,7 +11,8 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent, data: {title: 'Login'}},
   {path: 'register', component: RegistrationComponent, data: { title: 'Registration'}},
   { path: 'survey', component: SurveyComponent, data: { title: 'Surveys' } },
-  { path: 'dashboard', component: DashboardComponent, data: { title: 'Dashboard' } },
+  { path: 'dashboard', component: DashboardComponent },
+  
   
 ];
 
