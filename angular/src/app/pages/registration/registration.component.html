@@ -1,0 +1,37 @@
+<app-base-page></app-base-page>
+<main>
+    <div class="row">
+      <div class="col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-sm-8 offset-sm-1">
+        <div class="mt-2 p-2 text-center text-white" *ngIf="error != null">
+          {{ error }}
+        </div>
+        <form (ngSubmit)="signupdata(signup)" class="form-box">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input placeholder="Enter First Name" [(ngModel)]='user!.fname' name="fname" type="text"
+              class="form-control mb-3 mt-3">
+          </div><div class="form-group">
+            <label for="lname">Last Name</label>
+            <input placeholder="Enter Username" [(ngModel)]='user!.lname' name="lname" type="text"
+              class="form-control mb-3 mt-3">
+          </div><div class="form-group">
+            <label for="email">Email</label>
+            <input placeholder="Enter Username" [(ngModel)]='user!.email' name="email" type="text"
+              class="form-control mb-3 mt-3">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password</label>
+            <input id="pwd" type="password" [(ngModel)]='user!.password' name="password"
+              class="form-control mb-3 mt-3">
+          </div>
+          <div class="form-group">
+            <label for="cpwd">Confirm Password</label>
+            <input id="cpwd" type="password" [(ngModel)]='user!.cpassword' name="cpassword"
+              class="form-control mb-3 mt-3">
+          </div>
+          <div class=""><span>Already have Account <a href="/login">Signup</a></span></div>
+          <button type="submit" class="btn btn-success">Login</button>
+        </form>
+      </div>
+    </div>
+</main>
