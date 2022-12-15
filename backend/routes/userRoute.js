@@ -10,6 +10,7 @@ const {
 const { isAuthenticated } = require("../middlewares/auth");
 
 // Admin || User
+
 router.route("/create").post(createUser);
 router.route("/login").post(loginUser);
 router.route("/logout").post(isAuthenticated, logoutUser);

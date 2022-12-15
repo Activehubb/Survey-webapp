@@ -20,6 +20,7 @@ app.use(morgan("combined"));
 app.use(cookieParser());
 app.use(express.json());
 
+// /api/v1/create
 app.use("/api/v1/", userRoute);
 app.use("/api/v1/", surveyRoute);
 app.use("/api/v1/", reportRoute);
